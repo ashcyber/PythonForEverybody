@@ -1,11 +1,8 @@
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
-url = 'http://py4e-data.dr-chuck.net/comments_66356.html'
+url = input('Enter URL: ')
 html = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(html, 'html.parser')
-
-
-#parse all the a tags
 
 sum = 0
 tags =  soup.find_all("span", class_="comments")
